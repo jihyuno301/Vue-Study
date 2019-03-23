@@ -10,7 +10,16 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
-
+      Vue.component('child-component', {
+        props:['propsdata'], //속성이름
+        template:'<p>{{propsdata}}</p>',
+      });
+      new Vue({
+        el:'#app',
+        data:{
+          message:'Hello Vue! passed from Parent Component'
+        }
+      });
     </script>
 
   </body>
